@@ -26,3 +26,8 @@ This will come in two flavors:
    - SqlProj-QS_tables.sql;
    - SqlProj-QS_procedures.sql
 
+
+
+This is the beginning of the project and there will be some updates until the end of this year 😊
+
+
