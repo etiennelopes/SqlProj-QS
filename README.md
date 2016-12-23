@@ -50,8 +50,12 @@ This will come in two flavors:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_get_qs_db_config_state  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: collects configuration data from every database where is_query_store_on = 1 in the instance into a table called: tb_qs_db_config_state  
    
-
-
-This is the beginning of the project and there will be some updates until the end of this year 😊
-
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_qs_state_alert  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every database where the last desired_state_desc is different from the actual_state_desc  
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_qs_size_alert  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every database where the last current_storage_size_mb is a specified percentage (@percent_full) of max_storage_size_mb  
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_get_qs_lost_objects  
+   
 
