@@ -46,7 +46,7 @@ This will come in two flavors:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Table Name**: tb_qs_db_lost_objects  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: holds information about objects (for example SPs) that were dropped and are still referenced by query store, for every database where is_query_store_on = 1 in the instance.  
    
-   - SqlProj-QS_procedures.sql  
+   - **SqlProj-QS_procedures.sql**    
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_get_qs_db_config_state  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: collects configuration data from every database where is_query_store_on = 1 in the instance into a table called: tb_qs_db_config_state  
    
@@ -55,7 +55,11 @@ This will come in two flavors:
    
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_qs_size_alert  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every database where the last current_storage_size_mb is a specified percentage (@percent_full) of max_storage_size_mb  
-   
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_get_qs_lost_objects  
    
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_get_qs_lost_objects  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: Gets objects (for example SPs) that were dropped and are still referenced by query store for every database where is_query_store_on = 1 in the instance.  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usage example:  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imagine applicational releases are being made using DROP IF EXISTS/CREATE instead of ALTER. A new object with a new object_id will be created with no relation with the previous release of the object to QS eyes.  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This SP helps to track these occurences allowing to act accordingly.
+   
 
