@@ -20,8 +20,9 @@ This will come in two flavors:
 
 1. Simply creating the stored procedures on master database, offering the possibility to obtain snapshots of the current settings for all databases in the instance at once. Code available in:
 
-   - SqlProj-QS_system_procedures.sql
-   
+   - SqlProj-QS_system_procedures.sql  
+   * **Proc Name**: sp_get_qs_db_config_state  
+   
 2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code available in:
    - SqlProj-QS_tables.sql;
    - SqlProj-QS_procedures.sql
