@@ -13,9 +13,6 @@ Let me give you just an example, query store may be configured for **READ_WRITE*
 
 If there are many databases in each instance, monitoring all these settings properly and regularly can become a hard task so, long story short, I've decided to implement a kind of a (T-SQL) tool that would simplify monitoring Query Store at the instance level, for all its databases at once :-)
 
-Starting with a stored procedure that collects and presents relevant configuration data from every database where is_query_store_on = 1 in the instance :-)
-
-
 This will come in two flavors:
 
 1. Simply creating the stored procedures on master database, offering the possibility to obtain snapshots of the current settings for all databases in the instance at once. Code and comments available in:
