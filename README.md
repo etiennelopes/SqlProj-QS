@@ -18,7 +18,7 @@ Starting with a stored procedure that collects and presents relevant configurati
 
 This will come in two flavors:
 
-1. Simply creating the stored procedures on master database, offering the possibility to obtain snapshots of the current settings for all databases in the instance at once. Code available in:
+1. Simply creating the stored procedures on master database, offering the possibility to obtain snapshots of the current settings for all databases in the instance at once. Code and comments available in:
 
    - **SqlProj-QS_system_procedures.sql**  
      
