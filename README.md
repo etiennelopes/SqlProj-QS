@@ -43,7 +43,9 @@ This will come in two flavors:
    
 2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code and comments available in:
    - **SqlProj-QS_tables.sql**  
-   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Table Name**: tb_qs_db_config_state  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: holds configuration data from every database where is_query_store_on = 1 in the instance.  
+     
    - SqlProj-QS_procedures.sql
 
 
