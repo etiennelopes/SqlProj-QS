@@ -46,8 +46,10 @@ This will come in two flavors:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Table Name**: tb_qs_db_lost_objects  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: holds information about objects (for example SPs) that were dropped and are still referenced by query store, for every database where is_query_store_on = 1 in the instance.  
    
-   - SqlProj-QS_procedures.sql
-
+   - SqlProj-QS_procedures.sql  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_get_qs_db_config_state  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: collects configuration data from every database where is_query_store_on = 1 in the instance into a table called: tb_qs_db_config_state  
+   
 
 
 This is the beginning of the project and there will be some updates until the end of this year 😊
