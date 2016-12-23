@@ -66,6 +66,10 @@ This will come in two flavors:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every dropped (hence lost) object in every database that is still referenced by query store.  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes:  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also shows object text to help relating with new release if it's the case.  
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This SP reads from table tb_qs_db_lost_objects which in turn is refreshed via SP: usp_get_qs_lost_objects.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This SP reads from table tb_qs_db_lost_objects which in turn is refreshed via SP: usp_get_qs_lost_objects.  
+   
+   
+   And there is more to come as soon as I can find the time :-)
+   
    
 
