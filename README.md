@@ -17,7 +17,7 @@ This will come in two flavors:
 
 1. Simply creating the stored procedures on master database, offering the possibility to obtain snapshots of the current settings for all databases in the instance at once. Code and comments available in:
 
-   - **SqlProj-QS_system_procedures.sql**  
+   - **SqlProj-QS_system_procedures.sql - See uploaded file**  
      
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: sp_get_qs_db_config_state  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: Shows current configuration data from every database where is_query_store_on = 1 in the instance.  
@@ -39,14 +39,14 @@ This will come in two flavors:
    
    
 2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code and comments available in:
-   - **SqlProj-QS_tables.sql**  
+   - **SqlProj-QS_tables.sql - See uploaded file**  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Table Name**: tb_qs_db_config_state  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: holds configuration data from every database where is_query_store_on = 1 in the instance.  
    
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Table Name**: tb_qs_db_lost_objects  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: holds information about objects (for example SPs) that were dropped and are still referenced by query store, for every database where is_query_store_on = 1 in the instance.  
    
-   - **SqlProj-QS_procedures.sql**    
+   - **SqlProj-QS_procedures.sql - See uploaded file**    
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_get_qs_db_config_state  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: collects configuration data from every database where is_query_store_on = 1 in the instance into a table called: tb_qs_db_config_state  
    
@@ -60,6 +60,12 @@ This will come in two flavors:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: Gets objects (for example SPs) that were dropped and are still referenced by query store for every database where is_query_store_on = 1 in the instance.  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usage example:  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imagine applicational releases are being made using DROP IF EXISTS/CREATE instead of ALTER. A new object with a new object_id will be created with no relation with the previous release of the object to QS eyes.  
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This SP helps to track these occurences allowing to act accordingly.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This SP helps to track these occurences allowing to act accordingly.  
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: usp_qs_lost_object_alert  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every dropped (hence lost) object in every database that is still referenced by query store.  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes:  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also shows object text to help relating with new release if it's the case.  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This SP reads from table tb_qs_db_lost_objects which in turn is refreshed via SP: usp_get_qs_lost_objects.
    
 
