@@ -22,7 +22,11 @@ This will come in two flavors:
 
    - SqlProj-QS_system_procedures.sql  
    * **Proc Name**: sp_get_qs_db_config_state  
-   
+         Description: Shows current configuration data from every database where is_query_store_on = 1 in the instance.  
+         Notes:  
+         1 - This stored procedure must be created on master database;  
+         2 - The results are sent to the std output and (unlike the other version) they're not persisted.  
+   
 2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code available in:
    - SqlProj-QS_tables.sql;
    - SqlProj-QS_procedures.sql
