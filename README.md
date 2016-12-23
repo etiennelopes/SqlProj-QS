@@ -29,7 +29,16 @@ This will come in two flavors:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The results are sent to the std output and (unlike the other version) they're not persisted.  
      
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: sp_qs_state_alert  
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every database where the desired_state_desc is different from the actual_state_desc.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every database where the desired_state_desc is different from the actual_state_desc.  
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: sp_qs_size_alert  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every database where the current_storage_size_mb is a specified percentage (@percent_full) of max_storage_size_mb  
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: sp_qs_lost_object_alert  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every dropped (hence lost) object in every database that is still referenced by query store.  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes:  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Also shows object text to help relating with new release if it's the case.  
+   
    
    
 2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code available in:
