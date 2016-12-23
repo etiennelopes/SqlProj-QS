@@ -22,9 +22,9 @@ This will come in two flavors:
 
    - **SqlProj-QS_system_procedures.sql**  
      
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proc Name**: sp_get_qs_db_config_state  
-    
-
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proc Name**: sp_get_qs_db_config_state  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: Shows current configuration data from every database where is_query_store_on = 1 in the instance.  
+   
    
 2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code available in:
    - SqlProj-QS_tables.sql;
