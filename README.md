@@ -71,7 +71,8 @@ This will come in two flavors:
      &nbsp;&nbsp;  
      &nbsp;&nbsp;  
      
-And there is more to come as soon as I can find the time :-)
+And there is more to come as soon as I can find the time... By the way you can also take a look at my blog if you like, where I've posted several articles regarding Query Store: https://sqland.wordpress.com/  
+See ya :-)
    
    
 
