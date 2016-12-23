@@ -42,7 +42,10 @@ This will come in two flavors:
    - **SqlProj-QS_tables.sql**  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Table Name**: tb_qs_db_config_state  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: holds configuration data from every database where is_query_store_on = 1 in the instance.  
-     
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Table Name**: tb_qs_db_lost_objects  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: holds information about objects (for example SPs) that were dropped and are still referenced by query store, for every database where is_query_store_on = 1 in the instance.  
+   
    - SqlProj-QS_procedures.sql
 
 
