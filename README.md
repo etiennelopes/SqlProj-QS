@@ -41,8 +41,9 @@ This will come in two flavors:
    
    
    
-2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code available in:
-   - SqlProj-QS_tables.sql;
+2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code and comments available in:
+   - **SqlProj-QS_tables.sql**  
+   
    - SqlProj-QS_procedures.sql
 
 
