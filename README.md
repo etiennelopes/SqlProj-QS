@@ -27,7 +27,9 @@ This will come in two flavors:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes:  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This stored procedure must be created on master database;  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The results are sent to the std output and (unlike the other version) they're not persisted.  
-   
+     
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Proc Name**: sp_qs_state_alert  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: picks up every database where the desired_state_desc is different from the actual_state_desc.
    
    
 2. Creating a DBADATABASE in the instance, allowing to keep the history of what has happened along the way for each database. Code available in:
